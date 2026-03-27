@@ -1,0 +1,459 @@
+/**
+ * Web Component System - CSS Variables
+ * 组件尺寸间距规范 CSS 实现
+ * 生成日期：2026-03-27
+ */
+
+:root {
+  /* ========================================
+     Spacing System (间距系统)
+     基础单位：4px | 标准单位：8px
+     ======================================== */
+  
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-10: 40px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
+
+  /* ========================================
+     Border Radius (圆角)
+     ======================================== */
+  
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-base: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* ========================================
+     Component Heights (组件高度)
+     ======================================== */
+  
+  /* Button */
+  --btn-height-sm: 32px;
+  --btn-height-md: 40px;
+  --btn-height-lg: 48px;
+  
+  /* Input */
+  --input-height-sm: 32px;
+  --input-height-md: 40px;
+  --input-height-lg: 48px;
+  
+  /* Select */
+  --select-height-sm: 32px;
+  --select-height-md: 40px;
+  --select-height-lg: 48px;
+
+  /* ========================================
+     Button (按钮)
+     ======================================== */
+  
+  /* Sizes */
+  --btn-padding-sm: 4px 12px;
+  --btn-padding-md: 8px 16px;
+  --btn-padding-lg: 12px 24px;
+  
+  --btn-font-size-sm: 13px;
+  --btn-font-size-md: 14px;
+  --btn-font-size-lg: 16px;
+  
+  --btn-icon-size-sm: 16px;
+  --btn-icon-size-md: 18px;
+  --btn-icon-size-lg: 20px;
+  
+  --btn-icon-gap: 8px;
+  --btn-border-radius: var(--radius-base);
+  --btn-min-width-sm: 64px;
+  --btn-min-width-md: 80px;
+  --btn-min-width-lg: 96px;
+
+  /* ========================================
+     Input (输入框)
+     ======================================== */
+  
+  --input-padding-sm: 4px 8px;
+  --input-padding-md: 8px 12px;
+  --input-padding-lg: 12px 16px;
+  
+  --input-font-size-sm: 13px;
+  --input-font-size-md: 14px;
+  --input-font-size-lg: 16px;
+  
+  --input-border-width: 1px;
+  --input-border-radius: var(--radius-base);
+  --input-focus-border-width: 2px;
+
+  /* ========================================
+     Checkbox / Radio
+     ======================================== */
+  
+  --checkbox-size-sm: 14px;
+  --checkbox-size-md: 16px;
+  --checkbox-size-lg: 20px;
+  
+  --checkbox-border-width: 1.5px;
+  --checkbox-border-radius-sm: 3px;
+  --checkbox-border-radius-md: 3px;
+  --checkbox-border-radius-lg: 4px;
+  
+  --checkbox-label-gap-sm: 8px;
+  --checkbox-label-gap-md: 8px;
+  --checkbox-label-gap-lg: 12px;
+  
+  --radio-size-sm: 14px;
+  --radio-size-md: 16px;
+  --radio-size-lg: 20px;
+  
+  --radio-dot-size-sm: 6px;
+  --radio-dot-size-md: 8px;
+  --radio-dot-size-lg: 10px;
+
+  /* ========================================
+     Switch (开关)
+     ======================================== */
+  
+  --switch-width-sm: 32px;
+  --switch-width-md: 40px;
+  --switch-width-lg: 48px;
+  
+  --switch-height-sm: 20px;
+  --switch-height-md: 24px;
+  --switch-height-lg: 28px;
+  
+  --switch-dot-size-sm: 16px;
+  --switch-dot-size-md: 20px;
+  --switch-dot-size-lg: 24px;
+  
+  --switch-padding: 2px;
+
+  /* ========================================
+     Tag (标签)
+     ======================================== */
+  
+  --tag-height-sm: 20px;
+  --tag-height-md: 24px;
+  --tag-height-lg: 32px;
+  
+  --tag-padding-sm: 2px 8px;
+  --tag-padding-md: 4px 12px;
+  --tag-padding-lg: 8px 16px;
+  
+  --tag-font-size-sm: 12px;
+  --tag-font-size-md: 13px;
+  --tag-font-size-lg: 14px;
+  
+  --tag-border-radius-sm: 10px;
+  --tag-border-radius-md: 12px;
+  --tag-border-radius-lg: 16px;
+
+  /* ========================================
+     Avatar (头像)
+     ======================================== */
+  
+  --avatar-size-xs: 24px;
+  --avatar-size-sm: 32px;
+  --avatar-size-md: 40px;
+  --avatar-size-lg: 48px;
+  --avatar-size-xl: 64px;
+  
+  --avatar-font-size-xs: 12px;
+  --avatar-font-size-sm: 14px;
+  --avatar-font-size-md: 16px;
+  --avatar-font-size-lg: 18px;
+  --avatar-font-size-xl: 24px;
+
+  /* ========================================
+     Badge (徽章)
+     ======================================== */
+  
+  --badge-dot-size: 8px;
+  --badge-count-height: 18px;
+  --badge-count-min-width: 18px;
+  --badge-count-padding: 0 6px;
+  --badge-count-font-size: 12px;
+
+  /* ========================================
+     Card (卡片)
+     ======================================== */
+  
+  --card-padding-sm: 16px;
+  --card-padding-md: 24px;
+  --card-padding-lg: 32px;
+  
+  --card-header-height-sm: 48px;
+  --card-header-height-md: 56px;
+  --card-header-height-lg: 64px;
+  
+  --card-border-radius: var(--radius-base);
+  --card-border-width: 1px;
+
+  /* ========================================
+     Table (表格)
+     ======================================== */
+  
+  --table-header-height: 48px;
+  --table-row-height-sm: 40px;
+  --table-row-height-md: 48px;
+  --table-row-height-lg: 56px;
+  
+  --table-cell-padding-sm: 8px 12px;
+  --table-cell-padding-md: 12px 16px;
+  --table-cell-padding-lg: 16px 20px;
+
+  /* ========================================
+     Navigation (导航)
+     ======================================== */
+  
+  --nav-header-height: 64px;
+  --nav-sidebar-width: 240px;
+  --nav-sidebar-collapsed-width: 64px;
+  
+  --nav-item-height: 40px;
+  --nav-item-padding: 12px 16px;
+  --nav-sub-item-height: 36px;
+  --nav-sub-item-padding: 12px 16px 12px 32px;
+
+  /* ========================================
+     Tabs (标签页)
+     ======================================== */
+  
+  --tabs-height-sm: 32px;
+  --tabs-height-md: 40px;
+  --tabs-height-lg: 48px;
+  
+  --tabs-padding-sm: 8px 12px;
+  --tabs-padding-md: 12px 16px;
+  --tabs-padding-lg: 16px 24px;
+  
+  --tabs-underline-height: 2px;
+  --tabs-gap: 24px;
+
+  /* ========================================
+     Modal (模态框)
+     ======================================== */
+  
+  --modal-width-sm: 400px;
+  --modal-width-md: 600px;
+  --modal-width-lg: 800px;
+  
+  --modal-header-height: 56px;
+  --modal-footer-height: 64px;
+  
+  --modal-padding: 24px;
+  --modal-border-radius: var(--radius-lg);
+
+  /* ========================================
+     Tooltip / Popover
+     ======================================== */
+  
+  --tooltip-max-width: 240px;
+  --tooltip-padding: 8px 12px;
+  --tooltip-border-radius: 6px;
+  --tooltip-arrow-size: 6px;
+  
+  --popover-min-width: 180px;
+  --popover-max-width: 360px;
+  --popover-padding: 12px 16px;
+  --popover-border-radius: var(--radius-base);
+
+  /* ========================================
+     Icon (图标)
+     ======================================== */
+  
+  --icon-size-xs: 12px;
+  --icon-size-sm: 14px;
+  --icon-size-md: 16px;
+  --icon-size-base: 18px;
+  --icon-size-lg: 20px;
+  --icon-size-xl: 24px;
+  --icon-size-2xl: 32px;
+  --icon-size-3xl: 48px;
+  --icon-size-4xl: 64px;
+
+  /* ========================================
+     Z-Index (层级)
+     ======================================== */
+  
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-notification: 1070;
+
+  /* ========================================
+     Breakpoints (断点 - 仅供参考)
+     实际使用媒体查询实现
+     ======================================== */
+  
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* ========================================
+     Container (容器)
+     ======================================== */
+  
+  --container-padding-xs: 16px;
+  --container-padding-sm: 16px;
+  --container-padding-md: 24px;
+  --container-padding-lg: 32px;
+  --container-padding-xl: 48px;
+  --container-padding-2xl: 64px;
+  
+  --container-max-width-md: 720px;
+  --container-max-width-lg: 960px;
+  --container-max-width-xl: 1200px;
+  --container-max-width-2xl: 1440px;
+
+  /* ========================================
+     Grid (网格)
+     ======================================== */
+  
+  --grid-columns: 12;
+  --grid-gutter-xs: 16px;
+  --grid-gutter-sm: 16px;
+  --grid-gutter-md: 24px;
+  --grid-gutter-lg: 24px;
+  --grid-gutter-xl: 24px;
+  --grid-gutter-2xl: 24px;
+
+  /* ========================================
+     Transitions (动画)
+     ======================================== */
+  
+  --transition-fast: 0.15s;
+  --transition-base: 0.3s;
+  --transition-slow: 0.5s;
+  
+  --easing-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --easing-in: cubic-bezier(0.4, 0, 1, 1);
+  --easing-out: cubic-bezier(0, 0, 0.2, 1);
+  --easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========================================
+     Shadows (阴影)
+     ======================================== */
+  
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.15);
+  --shadow-2xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   Utility Classes (实用类)
+   ======================================== */
+
+/* Spacing */
+.p-0 { padding: var(--spacing-0); }
+.p-1 { padding: var(--spacing-1); }
+.p-2 { padding: var(--spacing-2); }
+.p-3 { padding: var(--spacing-3); }
+.p-4 { padding: var(--spacing-4); }
+.p-6 { padding: var(--spacing-6); }
+.p-8 { padding: var(--spacing-8); }
+
+.m-0 { margin: var(--spacing-0); }
+.m-1 { margin: var(--spacing-1); }
+.m-2 { margin: var(--spacing-2); }
+.m-3 { margin: var(--spacing-3); }
+.m-4 { margin: var(--spacing-4); }
+.m-6 { margin: var(--spacing-6); }
+.m-8 { margin: var(--spacing-8); }
+
+/* Radius */
+.rounded-none { border-radius: var(--radius-none); }
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded { border-radius: var(--radius-base); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadows */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow { box-shadow: var(--shadow-base); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Container */
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding-xs);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-max-width-md);
+    padding: 0 var(--container-padding-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-max-width-lg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-max-width-xl);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: var(--container-max-width-2xl);
+  }
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: var(--grid-gutter-xs);
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+.grid-cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+@media (min-width: 768px) {
+  .grid {
+    gap: var(--grid-gutter-md);
+  }
+  
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .lg\:grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+}
