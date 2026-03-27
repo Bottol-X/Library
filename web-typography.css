@@ -1,0 +1,264 @@
+/**
+ * Web Typography System
+ * 基于移动端设计系统适配，参考 Ant Design / Material Design / Figma
+ * 生成日期：2026-03-27
+ */
+
+:root {
+  /* ========================================
+     Font Family
+     ======================================== */
+  
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", 
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, 
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  
+  --font-family-brand: "Inter", var(--font-family-sans);
+  
+  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", 
+    "Roboto Mono", Consolas, "Courier New", monospace;
+
+  /* ========================================
+     Display (超大标题)
+     用于: Landing Page, Hero Section
+     ======================================== */
+  
+  --font-display-2xl: 700 72px/90px var(--font-family-sans);
+  --font-display-xl: 700 60px/72px var(--font-family-sans);
+  --font-display-lg: 600 48px/60px var(--font-family-sans);
+  --font-display-md: 600 36px/44px var(--font-family-sans);
+  
+  /* Display 专用字间距 */
+  --letter-spacing-display: -0.02em;
+
+  /* ========================================
+     Heading (页面标题)
+     用于: 页面内容区标题，模块标题
+     ======================================== */
+  
+  --font-heading-h1: 600 32px/40px var(--font-family-sans);
+  --font-heading-h2: 600 24px/32px var(--font-family-sans);
+  --font-heading-h3: 600 20px/28px var(--font-family-sans);
+  --font-heading-h4: 600 18px/28px var(--font-family-sans);
+  --font-heading-h5: 600 16px/24px var(--font-family-sans);
+  --font-heading-h6: 600 14px/22px var(--font-family-sans);
+
+  /* ========================================
+     Body (正文)
+     用于: 段落，描述，内容区
+     ======================================== */
+  
+  --font-body-xl: 400 18px/28px var(--font-family-sans);
+  --font-body-lg: 400 16px/24px var(--font-family-sans); /* 推荐标准正文 */
+  --font-body-md: 400 14px/22px var(--font-family-sans); /* Ant Design 风格 */
+  --font-body-sm: 400 13px/20px var(--font-family-sans);
+  --font-body-xs: 400 12px/18px var(--font-family-sans);
+  
+  /* Body 强调变体 (粗体) */
+  --font-body-lg-strong: 600 16px/24px var(--font-family-sans);
+  --font-body-md-strong: 600 14px/22px var(--font-family-sans);
+  --font-body-sm-strong: 600 13px/20px var(--font-family-sans);
+
+  /* ========================================
+     Label (标签)
+     用于: 按钮文字，表单标签，Tab 标签
+     ======================================== */
+  
+  --font-label-lg: 500 16px/24px var(--font-family-sans);
+  --font-label-md: 500 14px/20px var(--font-family-sans); /* 推荐标准按钮 */
+  --font-label-sm: 500 13px/18px var(--font-family-sans);
+  --font-label-xs: 500 12px/16px var(--font-family-sans);
+
+  /* ========================================
+     Caption (辅助文字)
+     用于: 提示，时间戳，版权信息
+     ======================================== */
+  
+  --font-caption-md: 400 12px/18px var(--font-family-sans);
+  --font-caption-sm: 400 11px/16px var(--font-family-sans);
+  --font-caption-xs: 400 10px/14px var(--font-family-sans);
+
+  /* ========================================
+     Code (代码/等宽)
+     用于: 代码块，命令行，数字展示
+     ======================================== */
+  
+  --font-code-lg: 400 16px/24px var(--font-family-mono);
+  --font-code-md: 400 14px/22px var(--font-family-mono);
+  --font-code-sm: 400 13px/20px var(--font-family-mono);
+  --font-code-xs: 400 12px/18px var(--font-family-mono);
+
+  /* ========================================
+     Utility (工具类)
+     ======================================== */
+  
+  --line-height-base: 1.5;
+  --line-height-tight: 1.25;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+}
+
+/* ========================================
+   实用类 (Utility Classes)
+   ======================================== */
+
+/* Display */
+.text-display-2xl { font: var(--font-display-2xl); letter-spacing: var(--letter-spacing-display); }
+.text-display-xl  { font: var(--font-display-xl); letter-spacing: var(--letter-spacing-display); }
+.text-display-lg  { font: var(--font-display-lg); }
+.text-display-md  { font: var(--font-display-md); }
+
+/* Heading */
+.text-h1 { font: var(--font-heading-h1); }
+.text-h2 { font: var(--font-heading-h2); }
+.text-h3 { font: var(--font-heading-h3); }
+.text-h4 { font: var(--font-heading-h4); }
+.text-h5 { font: var(--font-heading-h5); }
+.text-h6 { font: var(--font-heading-h6); }
+
+/* Body */
+.text-body-xl { font: var(--font-body-xl); }
+.text-body-lg { font: var(--font-body-lg); }
+.text-body-md { font: var(--font-body-md); }
+.text-body-sm { font: var(--font-body-sm); }
+.text-body-xs { font: var(--font-body-xs); }
+
+/* Body Strong */
+.text-body-lg-strong { font: var(--font-body-lg-strong); }
+.text-body-md-strong { font: var(--font-body-md-strong); }
+.text-body-sm-strong { font: var(--font-body-sm-strong); }
+
+/* Label */
+.text-label-lg { font: var(--font-label-lg); }
+.text-label-md { font: var(--font-label-md); }
+.text-label-sm { font: var(--font-label-sm); }
+.text-label-xs { font: var(--font-label-xs); }
+
+/* Caption */
+.text-caption-md { font: var(--font-caption-md); }
+.text-caption-sm { font: var(--font-caption-sm); }
+.text-caption-xs { font: var(--font-caption-xs); }
+
+/* Code */
+.text-code-lg { font: var(--font-code-lg); }
+.text-code-md { font: var(--font-code-md); }
+.text-code-sm { font: var(--font-code-sm); }
+.text-code-xs { font: var(--font-code-xs); }
+
+/* ========================================
+   HTML 标签默认样式
+   ======================================== */
+
+body {
+  font: var(--font-body-lg);
+  font-family: var(--font-family-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 { font: var(--font-heading-h1); margin: 0; }
+h2 { font: var(--font-heading-h2); margin: 0; }
+h3 { font: var(--font-heading-h3); margin: 0; }
+h4 { font: var(--font-heading-h4); margin: 0; }
+h5 { font: var(--font-heading-h5); margin: 0; }
+h6 { font: var(--font-heading-h6); margin: 0; }
+
+p {
+  font: var(--font-body-lg);
+  margin: 0 0 1em 0;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+em, i {
+  font-style: italic;
+}
+
+small {
+  font: var(--font-caption-md);
+}
+
+code {
+  font: var(--font-code-md);
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+pre {
+  font: var(--font-code-md);
+  padding: 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+/* ========================================
+   响应式 (Responsive)
+   ======================================== */
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  :root {
+    --font-display-2xl: 700 60px/72px var(--font-family-sans);
+    --font-display-xl: 700 48px/60px var(--font-family-sans);
+    --font-display-lg: 600 36px/44px var(--font-family-sans);
+    --font-heading-h1: 600 28px/36px var(--font-family-sans);
+    --font-heading-h2: 600 24px/32px var(--font-family-sans);
+  }
+}
+
+/* Mobile (<768px) - 切换到移动端规范 */
+@media (max-width: 767px) {
+  :root {
+    /* Display 缩小 */
+    --font-display-2xl: 700 48px/60px var(--font-family-sans);
+    --font-display-xl: 700 36px/44px var(--font-family-sans);
+    --font-display-lg: 600 28px/36px var(--font-family-sans);
+    
+    /* Heading 对应移动端 */
+    --font-heading-h1: 600 24px/28px var(--font-family-sans); /* 移动端 T1 */
+    --font-heading-h2: 600 20px/28px var(--font-family-sans);
+    --font-heading-h3: 600 18px/28px var(--font-family-sans);
+    --font-heading-h4: 600 16px/24px var(--font-family-sans);
+  }
+}
+
+/* ========================================
+   Dark Mode (暗色模式)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* 暗色模式下字重可以略微增加 (+100) 以保持清晰度 */
+    --font-heading-h1: 600 32px/40px var(--font-family-sans);
+    --font-heading-h2: 600 24px/32px var(--font-family-sans);
+    --font-body-lg: 400 16px/24px var(--font-family-sans);
+  }
+}
+
+/* ========================================
+   打印样式 (Print)
+   ======================================== */
+
+@media print {
+  body {
+    font: var(--font-body-md); /* 打印使用较小字号 */
+  }
+  
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+  
+  code, pre {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd;
+  }
+}

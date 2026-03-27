@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Typography System - 字体系统演示</title>
+  <link rel="stylesheet" href="web-typography.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fafafa;
+    }
+
+    .section {
+      background: white;
+      padding: 32px;
+      margin-bottom: 32px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font: var(--font-heading-h2);
+      color: #1068E4;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e2e8;
+    }
+
+    .demo-item {
+      padding: 16px 0;
+      border-bottom: 1px solid #f5f5f7;
+    }
+
+    .demo-item:last-child {
+      border-bottom: none;
+    }
+
+    .demo-label {
+      font: var(--font-caption-md);
+      color: #666;
+      margin-bottom: 8px;
+      font-family: var(--font-family-mono);
+      background: #f5f5f7;
+      padding: 4px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .demo-text {
+      color: #0F1721;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .color-card {
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #e2e2e8;
+    }
+
+    .usage-example {
+      background: #f5f5f7;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 12px;
+      border: 1px solid #e2e2e8;
+      text-align: left;
+    }
+
+    .comparison-table th {
+      background: #f5f5f7;
+      font: var(--font-label-md);
+    }
+
+    .comparison-table td {
+      font: var(--font-body-md);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font: var(--font-caption-md);
+      background: #E0E8FF;
+      color: #1068E4;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="section">
+    <h1 style="font: var(--font-display-lg); color: #1068E4; margin-bottom: 16px;">
+      Web Typography System
+    </h1>
+    <p style="font: var(--font-body-lg); color: #666;">
+      基于移动端设计系统适配，参考 Ant Design / Material Design / Figma
+    </p>
+    <div style="margin-top: 16px;">
+      <span class="tag">33 个字体变量</span>
+      <span class="tag">6 个层级</span>
+      <span class="tag">响应式支持</span>
+      <span class="tag">无障碍友好</span>
+    </div>
+  </header>
+
+  <!-- Display -->
+  <section class="section">
+    <h2 class="section-title">Display（超大标题）</h2>
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 24px;">
+      用于 Landing Page、Hero Section、营销首屏
+    </p>
+
+    <div class="demo-item">
+      <div class="demo-label">display-2xl (72px / 90px / Bold 700)</div>
+      <div class="demo-text" style="font: var(--font-display-2xl);">
+        Build Amazing Products
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">display-xl (60px / 72px / Bold 700)</div>
+      <div class="demo-text" style="font: var(--font-display-xl);">
+        Transform Your Workflow
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">display-lg (48px / 60px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-display-lg);">
+        Powerful Design System
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">display-md (36px / 44px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-display-md);">
+        Unified Typography
+      </div>
+    </div>
+  </section>
+
+  <!-- Heading -->
+  <section class="section">
+    <h2 class="section-title">Heading（页面标题）</h2>
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 24px;">
+      用于页面内容区标题、模块标题、卡片标题
+    </p>
+
+    <div class="demo-item">
+      <div class="demo-label">heading-h1 (32px / 40px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-heading-h1);">
+        页面主标题 - Page Title
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">heading-h2 (24px / 32px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-heading-h2);">
+        二级标题 - Section Heading
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">heading-h3 (20px / 28px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-heading-h3);">
+        区块标题 - Block Title
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">heading-h4 (18px / 28px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-heading-h4);">
+        小区块标题 - Subsection Title
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">heading-h5 (16px / 24px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-heading-h5);">
+        列表标题 - List Heading
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">heading-h6 (14px / 22px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-heading-h6);">
+        辅助标题 - Minor Heading
+      </div>
+    </div>
+  </section>
+
+  <!-- Body -->
+  <section class="section">
+    <h2 class="section-title">Body（正文）</h2>
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 24px;">
+      用于段落、描述、内容区文字
+    </p>
+
+    <div class="demo-item">
+      <div class="demo-label">body-xl (18px / 28px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-body-xl);">
+        这是超大正文，适合营销文案、重点段落、首屏介绍文字。行高 1.56 提供舒适的阅读体验。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">body-lg (16px / 24px / Regular 400) ⭐ 推荐标准</div>
+      <div class="demo-text" style="font: var(--font-body-lg);">
+        这是标准正文，Web 端最常用的正文大小。适合文章段落、产品描述、详情页内容。与移动端保持一致。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">body-md (14px / 22px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-body-md);">
+        这是中等正文，Ant Design 风格常用。适合表单说明、列表内容、次要信息展示。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">body-sm (13px / 20px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-body-sm);">
+        这是小正文，适合辅助说明、提示文字、次要描述信息。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">body-xs (12px / 18px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-body-xs);">
+        这是超小正文，适合次要内容、版权信息、极小说明文字。
+      </div>
+    </div>
+
+    <h3 style="font: var(--font-heading-h4); margin: 24px 0 16px;">强调变体（粗体）</h3>
+
+    <div class="demo-item">
+      <div class="demo-label">body-lg-strong (16px / 24px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-body-lg-strong);">
+        这是加粗的标准正文，用于强调重要信息、关键数据、高亮内容。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">body-md-strong (14px / 22px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-body-md-strong);">
+        这是加粗的中等正文，适合列表项标题、表格标题、重点标注。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">body-sm-strong (13px / 20px / Semibold 600)</div>
+      <div class="demo-text" style="font: var(--font-body-sm-strong);">
+        这是加粗的小正文，适合小标签强调、次要信息突出。
+      </div>
+    </div>
+  </section>
+
+  <!-- Label -->
+  <section class="section">
+    <h2 class="section-title">Label（标签）</h2>
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 24px;">
+      用于按钮文字、表单标签、Tab 标签、交互元素
+    </p>
+
+    <div class="demo-item">
+      <div class="demo-label">label-lg (16px / 24px / Medium 500)</div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button style="font: var(--font-label-lg); padding: 12px 24px; background: #1068E4; color: white; border: none; border-radius: 8px; cursor: pointer;">
+          大按钮 - Large Button
+        </button>
+        <span class="demo-text" style="font: var(--font-label-lg);">表单标签 Label</span>
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">label-md (14px / 20px / Medium 500) ⭐ 推荐标准</div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button style="font: var(--font-label-md); padding: 10px 16px; background: #1068E4; color: white; border: none; border-radius: 8px; cursor: pointer;">
+          标准按钮 - Button
+        </button>
+        <span class="demo-text" style="font: var(--font-label-md);">用户名</span>
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">label-sm (13px / 18px / Medium 500)</div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button style="font: var(--font-label-sm); padding: 6px 12px; background: #1068E4; color: white; border: none; border-radius: 8px; cursor: pointer;">
+          小按钮 - Small
+        </button>
+        <span class="demo-text" style="font: var(--font-label-sm);">Tab 标签</span>
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">label-xs (12px / 16px / Medium 500)</div>
+      <div style="display: flex; gap: 12px; align-items: center;">
+        <button style="font: var(--font-label-xs); padding: 4px 8px; background: #1068E4; color: white; border: none; border-radius: 4px; cursor: pointer;">
+          迷你 - Tiny
+        </button>
+        <span style="font: var(--font-label-xs); background: #F23C00; color: white; padding: 2px 6px; border-radius: 99px;">
+          徽章 5
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Caption -->
+  <section class="section">
+    <h2 class="section-title">Caption（辅助文字）</h2>
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 24px;">
+      用于提示、时间戳、版权信息、次要说明
+    </p>
+
+    <div class="demo-item">
+      <div class="demo-label">caption-md (12px / 18px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-caption-md); color: #999;">
+        这是提示文字，用于帮助信息、输入框说明、表单提示。
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">caption-sm (11px / 16px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-caption-sm); color: #999;">
+        发布于 2026-03-27 06:25 UTC · 版权所有 © 2026 AICO Team
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">caption-xs (10px / 14px / Regular 400)</div>
+      <div class="demo-text" style="font: var(--font-caption-xs); color: #999;">
+        小标签 · 角标文字 · 最小文字
+      </div>
+    </div>
+  </section>
+
+  <!-- Code -->
+  <section class="section">
+    <h2 class="section-title">Code（代码/等宽）</h2>
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 24px;">
+      用于代码块、命令行、数字展示、等宽字体场景
+    </p>
+
+    <div class="demo-item">
+      <div class="demo-label">code-lg (16px / 24px / Regular 400)</div>
+      <pre style="font: var(--font-code-lg); background: #f5f5f7; padding: 16px; border-radius: 8px; overflow-x: auto;">const greeting = "Hello World";
+console.log(greeting);</pre>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">code-md (14px / 22px / Regular 400) ⭐ 推荐标准</div>
+      <pre style="font: var(--font-code-md); background: #f5f5f7; padding: 16px; border-radius: 8px; overflow-x: auto;">function calculateTotal(price, quantity) {
+  return price * quantity;
+}</pre>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">code-sm (13px / 20px / Regular 400)</div>
+      <div style="font: var(--font-body-md);">
+        运行命令：<code style="font: var(--font-code-sm); background: #f5f5f7; padding: 2px 6px; border-radius: 4px;">npm install</code>
+      </div>
+    </div>
+
+    <div class="demo-item">
+      <div class="demo-label">code-xs (12px / 18px / Regular 400)</div>
+      <div style="font: var(--font-body-md);">
+        路径：<code style="font: var(--font-code-xs); background: #f5f5f7; padding: 2px 6px; border-radius: 4px;">/usr/local/bin</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section">
+    <h2 class="section-title">对比：移动端 vs Web 端</h2>
+    
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>层级</th>
+          <th>移动端</th>
+          <th>Web 端</th>
+          <th>调整说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>超大标题</td>
+          <td>H1: 48px</td>
+          <td>display-lg: 48px</td>
+          <td>Web 增加更大 Display 层级</td>
+        </tr>
+        <tr>
+          <td>一级标题</td>
+          <td>H2: 36px</td>
+          <td>heading-h1: 32px</td>
+          <td>Web 略小（页面内标题）</td>
+        </tr>
+        <tr>
+          <td>二级标题</td>
+          <td>H3: 28px</td>
+          <td>heading-h2: 24px</td>
+          <td>保持比例缩放</td>
+        </tr>
+        <tr>
+          <td>正文</td>
+          <td>Normal: 16px</td>
+          <td>body-lg: 16px</td>
+          <td><strong>一致</strong></td>
+        </tr>
+        <tr>
+          <td>辅助文字</td>
+          <td>C1: 13px</td>
+          <td>body-sm: 13px</td>
+          <td><strong>一致</strong></td>
+        </tr>
+        <tr>
+          <td>按钮文字</td>
+          <td>ButtonLarge: 16px</td>
+          <td>label-lg: 16px</td>
+          <td><strong>一致</strong></td>
+        </tr>
+        <tr>
+          <td>最小字号</td>
+          <td>10px</td>
+          <td>10px</td>
+          <td><strong>一致</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Usage Tips -->
+  <section class="section">
+    <h2 class="section-title">使用建议</h2>
+    
+    <h3 style="font: var(--font-heading-h4); margin-bottom: 12px;">1. 标准场景</h3>
+    <div class="usage-example">
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        <strong>页面布局：</strong> h1 (32px) → h2 (24px) → body-lg (16px)
+      </p>
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        <strong>表单：</strong> label-md (14px) + body-md (14px) + caption-md (12px)
+      </p>
+      <p style="font: var(--font-body-md);">
+        <strong>按钮：</strong> label-lg (16px) / label-md (14px) / label-sm (13px)
+      </p>
+    </div>
+
+    <h3 style="font: var(--font-heading-h4); margin: 24px 0 12px;">2. 响应式</h3>
+    <div class="usage-example">
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        <strong>Desktop (≥1024px)：</strong> 使用 Web 端规范（display/heading）
+      </p>
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        <strong>Tablet (768-1023px)：</strong> Display 缩小，Heading 保持或缩小一级
+      </p>
+      <p style="font: var(--font-body-md);">
+        <strong>Mobile (<768px)：</strong> 切换到移动端规范（H1/H2/H3）
+      </p>
+    </div>
+
+    <h3 style="font: var(--font-heading-h4); margin: 24px 0 12px;">3. 无障碍</h3>
+    <div class="usage-example">
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        ✅ 正文至少 16px（移动端）/ 14-16px（Web 端）
+      </p>
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        ✅ 辅助文字至少 12px（可读性底线）
+      </p>
+      <p style="font: var(--font-body-md); margin-bottom: 8px;">
+        ✅ 行高 1.5-1.8（舒适阅读）
+      </p>
+      <p style="font: var(--font-body-md);">
+        ✅ 文字与背景对比度至少 4.5:1（WCAG AA 标准）
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="section" style="text-align: center;">
+    <p style="font: var(--font-body-md); color: #666; margin-bottom: 8px;">
+      Web Typography System · 生成日期：2026-03-27
+    </p>
+    <p style="font: var(--font-caption-md); color: #999;">
+      基于移动端设计系统适配 · 参考 Ant Design / Material Design / Figma
+    </p>
+    <p style="font: var(--font-caption-sm); color: #999; margin-top: 16px;">
+      生成工具：OpenClaw + ux · 维护团队：AICO Team
+    </p>
+  </footer>
+</body>
+</html>
